@@ -1,5 +1,5 @@
-# tspractice10-clock
+# tspractice10-quiz
 
 ## Live DEMO
 
-https://makotoishida.github.io/tspractice10-clock/
+https://makotoishida.github.io/tspractice10-quiz/
