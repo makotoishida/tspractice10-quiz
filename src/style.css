@@ -51,3 +51,16 @@ footer a {
   background-color: #ffc;
 }
 
+.quizset-list {
+  display: grid;
+  width: 20rem;
+  max-width: 50%;
+  margin: 3rem auto;
+  gap: 1.6rem;
+}
+
+.quizset-list button {
+  padding: 0.6rem;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+}

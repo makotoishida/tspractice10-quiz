@@ -37,6 +37,41 @@ const quizData: QuizData = {
         },
       ],
     },
+    {
+      title: 'JavaScript',
+      quizzes: [
+        {
+          problem: 'What keyword should be used to declare a constant value?',
+          choices: [
+            { text: 'const', isCorrect: true },
+            { text: 'let' },
+            { text: 'var' },
+            { text: 'class' },
+            { text: 'do' },
+          ],
+        },
+        {
+          problem: 'What is the result of 2 ** 3 ?',
+          choices: [
+            { text: '8', isCorrect: true },
+            { text: '6' },
+            { text: '9' },
+            { text: '1.5' },
+            { text: '222' },
+          ],
+        },
+        {
+          problem: 'What is the result of Math.abs(-0.9)?',
+          choices: [
+            { text: '0.9', isCorrect: true },
+            { text: '1' },
+            { text: '0' },
+            { text: '-1' },
+            { text: '-1.8' },
+          ],
+        },
+      ],
+    },
   ],
 }
 
