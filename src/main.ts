@@ -2,7 +2,7 @@ import { html, render } from 'lit-html'
 import 'normalize.css'
 import './style.css'
 import quizData from './quiz-data'
-import { Choice, Quiz, QuizSet, State } from './types'
+import { Choice, QuizSet, State } from './types'
 
 const appRoot = document.querySelector<HTMLDivElement>('#app')!
 
