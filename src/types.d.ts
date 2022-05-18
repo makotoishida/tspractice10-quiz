@@ -13,3 +13,10 @@ export type QuizSet = {
 export type QuizData = {
   quizSets: QuizSet[]
 }
+
+
+export type State = {
+  page: 'menu' | 'quiz'
+  quizSet: QuizSet | undefined
+  quizIndex: number
+}

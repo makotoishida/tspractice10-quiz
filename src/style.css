@@ -51,16 +51,48 @@ footer a {
   background-color: #ffc;
 }
 
+.page {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0.4rem;
+  text-align: center;
+  border: 1px solid pink;
+}
+
 .quizset-list {
   display: grid;
-  width: 20rem;
-  max-width: 50%;
+  width: min(20rem, 50%);
   margin: 3rem auto;
   gap: 1.6rem;
 }
 
-.quizset-list button {
+
+.quiz {
+  padding: 0.4rem;
+  /* border: 1px solid aqua; */
+}
+
+.problem {
+  text-align: left;
+  font-weight: bold;
+}
+
+.choices {
+  display: flex;
+  margin: 1rem 0.4rem;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+
+button {
   padding: 0.6rem;
+  background-color: #eee;
   border: 2px solid #ccc;
   border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ccc;
 }
