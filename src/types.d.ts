@@ -19,4 +19,6 @@ export type State = {
   page: 'menu' | 'quiz'
   quizSet: QuizSet | undefined
   quizIndex: number
+  isOKAnimationActive: boolean
+  isNGAnimationActive: boolean
 }

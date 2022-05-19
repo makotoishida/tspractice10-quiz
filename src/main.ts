@@ -10,6 +10,8 @@ const state: State = {
   page: 'menu',
   quizSet: undefined,
   quizIndex: 0,
+  isOKAnimationActive: false,
+  isNGAnimationActive: false,
 }
 
 const shuffle = <T>(array: T[]) => {
@@ -33,16 +35,42 @@ const handleMenuClick = (quizSet: QuizSet) => {
 
 const handleChoiceClick = (choice: Choice) => {
   if (!state.quizSet) return
+  if (state.isOKAnimationActive || state.isNGAnimationActive) return
   console.log(choice)
   if (choice.isCorrect) {
-    if (state.quizIndex < state.quizSet.quizzes.length - 1) {
-      state.quizIndex++
-    } else {
+    const isLast = state.quizIndex >= state.quizSet.quizzes.length - 1
+    startOKAnimation(isLast)
+  } else {
+    startNGAnimation()
+  }
+}
+
+const startOKAnimation = (isLast: boolean) => {
+  state.isOKAnimationActive = true
+
+  setTimeout(() => {
+    state.isOKAnimationActive = false
+    if (isLast) {
       state.quizIndex = 0
       state.quizSet = undefined
       state.page = 'menu'
+    } else {
+      state.quizIndex++
     }
-  }
+    renderApp()
+  }, 1000)
+
+  renderApp()
+}
+
+const startNGAnimation = () => {
+  state.isNGAnimationActive = true
+
+  setTimeout(() => {
+    state.isNGAnimationActive = false
+    renderApp()
+  }, 800)
+
   renderApp()
 }
 
@@ -82,6 +110,9 @@ const QuizPage = () => {
             </button>`
         )}
       </div>
+
+      ${state.isOKAnimationActive ? html`<div class="ok_anim">OK</div>` : ''}
+      ${state.isNGAnimationActive ? html`<div class="ng_anim">NG</div>` : ''}
     </div>
   </div>`
 }

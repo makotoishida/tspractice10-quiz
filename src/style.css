@@ -84,6 +84,41 @@ footer a {
   flex-wrap: wrap;
 }
 
+.ok_anim, .ng_anim {
+  position: absolute;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  height: 10rem;
+  top: 20vh;
+  left: 20vw;
+  margin: auto;
+  font-size: 200%;
+  background-color: #ffffffc0;
+  border: 2px solid pink;
+  border-radius: 1rem;
+}
+
+.ok_anim {
+  color: blue;
+  border: 2px solid blue;
+  border-radius: 50%;
+  animation: ok-anim .5s ease-in-out infinite alternate;
+}
+@keyframes ok-anim {
+  0% { transform: scale(80%); }
+  100% { transform: scale(160%); }
+}
+
+.ng_anim {
+  color: red;
+  animation: ng-anim 0.8s linear infinite;
+}
+@keyframes ng-anim {
+  0%  {transform: rotateZ(0deg);}
+  100%  {transform: rotateZ(360deg);}
+}
 
 button {
   padding: 0.6rem;
@@ -96,3 +131,4 @@ button {
 button:hover {
   background-color: #ccc;
 }
+
